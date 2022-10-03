@@ -1,2 +1,4 @@
-# Predicting-Poverty-HH-data-
-Coding Dojo Machine Learning course project, predicting whether indiviudals are above or below the poverty line. 
+# Predicting Poverty
+As a part of the Machine Learning Coding Dojo course, will be predicting if individuals are above or below the poverty line at the $2.50/day threshold. 
+
+
