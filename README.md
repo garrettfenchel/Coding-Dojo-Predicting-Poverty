@@ -57,4 +57,57 @@ For example, the below Financial Variables were analyzed and eventually only "Nu
 
 ![Corr Financial Variables](https://user-images.githubusercontent.com/106602444/198092092-50cd2d1d-4707-4eae-8163-bd78671a9d0c.png)
 
+Financially the following predictor variables were selected for model creation: 
+
+**Country**: One of 7 country values
+
+**Is Urban**: Boolean, lives in urban area or no
+
+**Age Group**: One of 4 age groups
+
+**Female**: Boolean, is female or not
+
+**Married**: Boolean, is married or not
+
+**Religion**: One of 5 religions
+
+**Relationship to HH Head**: One of X relationships with Head of Household
+
+**Education Level**: One of 5 levels of education 
+
+**Literacy**: Boolean, literate or not 
+
+**Employment Type**: One of X types of employment
+
+**Share of HH Income Provided**: Percent of household income provided by individual
+
+**Income Agriculture or Livestock**: Boolean, if receieved income through agriculure or livestock sector
+
+**Income Friends Family**: Boolean, if receieved income through friends or family
+
+**Income Government**: Boolean, if receieved income from the governement
+
+**Income Own Business**: Boolean, if receieved income from own business
+
+**Income Private Sector**: Boolean, if receieved income through the private sector
+
+**Income Public Sector Family**: Boolean, if receieved income through the public sector
+
+**Number of Times Borrowed**: Number of times borrowed money last year
+
+**Formal Savings**: Boolean, if has formal savings or not
+
+**Has Insurance**: Boolean, if has insurance or not
+
+**Has Investment**: Boolean, if has investments or not
+
+**Number of Shocks**: Number of financial shocks last year
+
+**Phone Technology**: One of XX levels of phone technology 
+
+**Number of Financial Activities**: Number of financial activities last year
+
+**Math Skill**: Combined number of math skills 
+
+
 
