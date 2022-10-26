@@ -120,5 +120,14 @@ Financially the following predictor variables were selected for model creation:
 
 **Demographic Boolean Variables**: Frequency of demographic boolean variables. Note that most individuals are literate, rural living, married, and female. 
 
-![image](https://user-images.githubusercontent.com/106602444/198095868-d2209a7f-5e35-443e-bde6-3b405b4c3e38.png)
+![image](https://user-images.githubusercontent.com/106602444/198096361-b6ed82f7-c592-48f5-84b3-5ad9b16bd2ee.png)
+
+**Poverty Level by Age Group**: Average Poverty Bool result by age group, with size of point decided by frequency of age group in data set. The majority of observations were between 18-40 with slightly over half of them under the poverty line. 
+
+![image](https://user-images.githubusercontent.com/106602444/198096855-81f7adfc-54cc-455a-9ae6-aa98ec79ebb4.png)
+
+
+**Poverty Level by Country**: Average Poverty Bool result by country, with size of point decided by frequeny of country in data set. Fairly evenly distributed between the 7 countries, with country F with the lowest frequency. Countries A, C, and D have significantly higher rates of poverty.
+
+![image](https://user-images.githubusercontent.com/106602444/198096909-cfaf0aa1-7817-4636-91c1-1bd89280be67.png)
 
