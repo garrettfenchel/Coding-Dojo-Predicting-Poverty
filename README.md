@@ -1,16 +1,16 @@
 # Predicting Poverty
 
-Purpose of this notebook is to complete final project for Coding Dojo Data Science and Machine Learning course. 
+Purpose of this notebook is to complete the final project for Coding Dojo Data Science and Machine Learning course, where we were tasked with finding a data source, cleaning and organizing the data, analyzing the variables in the dataset, and creating several predicting models and comparing them.  
 
 ## Goal
 Predict whether individuals from 7 different countries are below poverty line ($2.50/day), using household survey data. 
 
 ## Data 
-Data originally comes from a Data Science competition hosted by Microsoft and Data Driven [(Data Science Capstone)](datasciencecapstone.org), and archived data was retrieved on Kaggle [(Kaggle Predicting Poverty)](https://www.kaggle.com/datasets/johnnyyiu/predicting-poverty?select=train_values_wJZrCmI.csv)  
+Data originally comes from a Data Science competition hosted by Microsoft and Data Driven [(Data Science Capstone)](datasciencecapstone.org), and archived data was retrieved through Kaggle [(Kaggle Predicting Poverty)](https://www.kaggle.com/datasets/johnnyyiu/predicting-poverty?select=train_values_wJZrCmI.csv)  
 
 Data containes 12,600 observations, with 59 predictor variables: ranging from age, sex, and education levels to financial activity, shocks, and income sources. 
 
-Original outcome variable was the Poverty Probability Index, which is a probability (0 to 1) that the individual is below the poverty line, based on predictor variables. 
+Original outcome variable was the Poverty Probability Index, which is a calculated probability (0 to 1) if an individual is below the poverty line, based on the 59 household survey results. 
 
 
 
@@ -18,14 +18,14 @@ Original outcome variable was the Poverty Probability Index, which is a probabil
 
 ### Outcome Variable
 
-Instead of prediciting the Poverty Probaility Index, in order to tackle a different problem a new outcome variable was created (Poverty Bool) with a binary outcome: 0 ("Not Under Poverty Line"), or 1 ("Under Poverty Line"). This was done by assinging 0 to any observations under 0.50, and assigning 1 to any observations over 0.50. There were no observations exactly at 0.50. 
+Instead of prediciting the Poverty Probaility Index, in order to tackle a different problem a new outcome variable was created (Poverty Bool) with a binary outcome: 0 ("Over Poverty Line"), or 1 ("Under Poverty Line"). This was done by assinging 0 to any observations with a PPI under 0.50, and assigning 1 to any observations with a PPI over 0.50. There were no observations exactly at 0.50. 
 
 
 ### Duplicates and Nulls 
 
 No duplicate values were found. 
 
-There were four columns (Bank, MM, MFI, and Other FSP interest rates) that contained more than 12,300 null observations. For this reason these columns were dropped from the analysis. After dropping these columns there still contained XXXX observations with null values. Due to the small quanity of null values, they were dropped from the analysis. 
+There were four columns (Bank, MM, MFI, and Other FSP interest rates) that contained more than 12,300 null observations. For this reason these columns were dropped from the analysis. After dropping these columns there still contained 550 observations with null values. Due to the small quanity of null values (comparitively to the total data set), they were dropped from the analysis and the final analyses were done with 12,050 observations. 
 
 
 ### Data Transformation 
@@ -51,7 +51,7 @@ There were four columns (Bank, MM, MFI, and Other FSP interest rates) that conta
 
 ## Variable Selection 
 
-There were large amounts of colinearity amongst predictor variables, such as the different math skills or banking attributes. For this reason correlation charts were created by groups of variables with high colinearity to evaluate which of the variables should be selected based on their colinearity with the outcome variable (Poverty Bool). 
+There were large amounts of colinearity amongst predictor variables, such as the different math skills or banking attributes. For this reason correlation charts were created by groups of variables with high colinearity to evaluate which of the variables should be selected for final analysis based on their colinearity with the outcome variable (Poverty Bool) and versus other predictor variables. 
 
 For example, the below Financial Variables were analyzed and eventually only "Number of Financial Activites" was chosen for modeling, due to its high colinearity with Poverty Bool and the other variables were excluded due to their high colinearity with the variable "Number of Financial Activities". 
 
@@ -71,13 +71,13 @@ Financially the following predictor variables were selected for model creation:
 
 **Religion**: One of 5 religions
 
-**Relationship to HH Head**: One of X relationships with Head of Household
+**Relationship to HH Head**: One of 6 types relationships with Head of Household
 
 **Education Level**: One of 5 levels of education 
 
 **Literacy**: Boolean, literate or not 
 
-**Employment Type**: One of X types of employment
+**Employment Type**: One of 5 types of employment or non-employment
 
 **Share of HH Income Provided**: Percent of household income provided by individual
 
@@ -103,7 +103,7 @@ Financially the following predictor variables were selected for model creation:
 
 **Number of Shocks**: Number of financial shocks last year
 
-**Phone Technology**: One of XX levels of phone technology 
+**Phone Technology**: One of 4 levels of phone technology 
 
 **Number of Financial Activities**: Number of financial activities last year
 
