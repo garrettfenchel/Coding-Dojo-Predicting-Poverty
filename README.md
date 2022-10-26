@@ -194,7 +194,9 @@ All four models were tested vs the validation subset after all optimization was 
 
 ![image](https://user-images.githubusercontent.com/106602444/198120297-0db9c760-6b45-4443-9094-8d90c76226fa.png)
 
-**Confusion Matrix and Metrics by Poverty Status
+**Confusion Matrix and Metrics by Poverty Status**
+
+Due to the outcome variable of Poverty Bool being unbalanced (64% were under poverty line), the model was much better at predicting correctly if an individual was under the poverty line, than if they were over. There were many more "false-positives" than "false-negatives".  
 
 ![image](https://user-images.githubusercontent.com/106602444/198124752-2feeb7c4-484a-4c94-adf5-513ed28b97d6.png)
 
@@ -203,4 +205,4 @@ All four models were tested vs the validation subset after all optimization was 
 
 ## Conclusions 
 
-This exercise was valubale to organize, visualize, analyzse data and in the end use it to create a model that could accurately predict if individuals lived below or above the poverty line. The final model achieved could predict 
+This exercise was valubale to organize, visualize, analyzse data and in the end use it to create a model that could accurately predict if individuals lived below or above the poverty line. The final model achieved could predict reasonably well (77% of the time) if individuals were under or above the poverty line ($2.50/day) though it did show bias by more frequently falsly predicting that an individual was under the poverty line, mainly due to the unbalanced outcome data. Further analysis would have to be done to either pull data that is balanced, or correct the bias to achieve better and more fair results. 
