@@ -122,17 +122,28 @@ Financially the following predictor variables were selected for model creation:
 
 ![image](https://user-images.githubusercontent.com/106602444/198096361-b6ed82f7-c592-48f5-84b3-5ad9b16bd2ee.png)
 
-**Poverty Level by Age Group**: Average Poverty Bool result by age group, with size of point decided by frequency of age group in data set. The majority of observations were between 18-40 with slightly over half of them under the poverty line. 
+**Poverty Probability by Demographic Variables**: Box plots of Poverty Probability (PPI) by demographic variables. There is no large difference in gender, but there are significant differences between Married and Unmarried, Urban vs Rural, and Literate vs Iliterate observations. 
 
-![image](https://user-images.githubusercontent.com/106602444/198096855-81f7adfc-54cc-455a-9ae6-aa98ec79ebb4.png)
+![image](https://user-images.githubusercontent.com/106602444/198109207-902cb825-430f-4f81-9adc-4067c907fca1.png)
 
 
-**Poverty Level by Country**: Average Poverty Bool result by country, with size of point decided by frequeny of country in data set. Fairly evenly distributed between the 7 countries, with country F with the lowest frequency. Countries A, C, and D have significantly higher rates of poverty.
+**Average Poverty Status Categorical Variables**: Average of Poverty Bool by cateogrical variables, with size of circle correlated with frequencies of value. 
 
-![image](https://user-images.githubusercontent.com/106602444/198096909-cfaf0aa1-7817-4636-91c1-1bd89280be67.png)
+There is a large quantity of observations between 18-40, though the average of all each group is significantly under the poverty line. 
 
-**Poverty Level by Income Type**: Average Poverty Bool result by income type, with size of point decided by frequeny of that income type in data set. High frequeny of Agriculture and Livestock, Friends and Family, and Own Business while Private and Public Sector income correlates with lower poverty levels. 
+Country frequencies are generally even, though there is a large difference in average poverty status between countries A, C, and D vs countries F, G, I, and J. 
 
-![image](https://user-images.githubusercontent.com/106602444/198097432-94507468-d7bb-4214-af78-37e30e10d420.png)
+For income type there is a high frequeny of Agriculture and Livestock, Friends and Family, and Own Business, while Private and Public Sector incomes correlate with lower poverty levels. 
+
+![image](https://user-images.githubusercontent.com/106602444/198109411-1b6598cc-7056-45f5-8e24-82d1fed34e8f.png)
+
+
+**Literacy Rate by Education Level**: Literacy rate correlates highly with Poverty Bool, so to analyze better Literacy Rate, it was compared with Education Levels and Age Groups. A
+
+As expected a positive relationship between education levels and literacy rate. 
+
+While a negative relationship between age and literacy rate, most likely reflecting recent trends in increased literacy among younger generations. 
+
+![image](https://user-images.githubusercontent.com/106602444/198110451-724b4b39-7065-42cf-8c9c-cd78965767c0.png)
 
 
