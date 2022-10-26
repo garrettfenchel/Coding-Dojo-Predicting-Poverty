@@ -131,3 +131,8 @@ Financially the following predictor variables were selected for model creation:
 
 ![image](https://user-images.githubusercontent.com/106602444/198096909-cfaf0aa1-7817-4636-91c1-1bd89280be67.png)
 
+**Poverty Level by Income Type**: Average Poverty Bool result by income type, with size of point decided by frequeny of that income type in data set. High frequeny of Agriculture and Livestock, Friends and Family, and Own Business while Private and Public Sector income correlates with lower poverty levels. 
+
+![image](https://user-images.githubusercontent.com/106602444/198097432-94507468-d7bb-4214-af78-37e30e10d420.png)
+
+
