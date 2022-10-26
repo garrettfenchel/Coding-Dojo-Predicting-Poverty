@@ -27,14 +27,19 @@ There were four columns (Bank, MM, MFI, and Other FSP interest rates) that conta
 ### Data Transformation 
 
 **Boolean**: All boolean variables that originally had values of "True" and "False", were converted to 1 and O respectively 
+
 **Categorical**: All categorical variables were converted to integers, starting with 0 
 
 ### Combining and New Variable Creation
 
 **Religion**: Due to the low frequency of "Religion" values "O" and "N", they were combined to one variable "O_N" 
+
 **Math Skill**: There were 4 math skill boolean variables (can add, can divide, etc.), so a new variable "Math Skill" was created by adding up the boolean values (1 or 0) for each of the math skill variables
+
 **Bank Skill**: There were 5 banking attribute boolean variables (active bank user, active mm user, etc.), so a new variable "Bank Skill" was created by adding up the boolean values (1 or 0) for each of the banking variables
+
 **Savings**: There were 3 types of savings boolean variables (formal savings, informal savings, etc.), so a new variable "Savings" was created by adding up the boolean values (1 or 0) for each of the savings variables
+
 **Age Groups**: A new variable was created grouping the ages into 4 different groups (15-18, 18-40,40-60, 60+)
 
 
