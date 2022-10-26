@@ -147,3 +147,60 @@ While a negative relationship between age and literacy rate, most likely reflect
 ![image](https://user-images.githubusercontent.com/106602444/198110451-724b4b39-7065-42cf-8c9c-cd78965767c0.png)
 
 
+**Histogram All Predictor Variables**: Histogram of all predictor variables. 
+
+![image](https://user-images.githubusercontent.com/106602444/198115016-e85aeeca-ea64-48f7-9ffa-4a56c7cae1da.png)
+
+
+## Model Creation
+
+Four different models were constructed: K-Nearest Neighbor (KNN), Decision Tree, Random Forest, and Logistic Regression (Logit). All models were created using the Scikit-learn library in Python. 
+
+### Scaling and Splitting Data
+
+First all variables values were standardized using Min-Max scaling to fall between 0 and 1. This was chosen over Standardization because for most of the variables the minimum and maximum values were known and set, due to the nature that the majority were boolean or categorical variables. 
+
+Data was separated into 3 groups: Train, Test, and Validation. With 70% of the data randomly grouped to Train, 15% randomly grouped to Test, and 15% randomly grouped to Validation. This was to allow a test group to use for optimization, and a validation after the models had been optimized. 
+
+### K-Nearest Neighbor 
+
+A KNN model was created and then tested to optimize the number of neighbors. An ideal number of neighbors was selected at 9, which delivered a high accuracy tested on the test-group without overfitting the train-group. 
+
+![image](https://user-images.githubusercontent.com/106602444/198116726-2aae5fa3-0b22-44ac-99fa-313bf106e6cc.png)
+
+
+### Decision Tree
+
+A Decicion Tree model was created and various iterations were run to optimize the max depth, based on model accuracy. An ideal depth of 6 was found, where the accuracy maximized and stabilized vs the test-group. 
+
+### Random Forest
+
+A Random Forest model was created, and using Grid Search the following parameters of the model were optimized: Number of Estimators, Bootstrap (True or False), and Max Features. After running the optimization, the following ideal parameters were selected for the final model: Number of Estimators = 5000, Boostrap = True, and Max Features = Squareroot. 
+
+### Logit
+
+A Logit model was created, and using Grid Search the following parameters of the model were optimized: C value, Class Weight (Balanced or Unbalanced), Fit Intercept (True or False), Penalty, Solver, Tol value, and Warm Start (True or False). After running the optimization, the following ideal parameters were selected for the final model: C= 1e-05, Class Weight= unbalanced, Fit Intercept= True, Penalty = None, Solver= lbfgs, Tol = 1, Warm Start= True. 
+
+
+## Results 
+
+All four models were tested vs the validation subset after all optimization was performed, and all models produced similar results when when comparing accuracy, precision, recall, and ROC AUC score. Though the Random Forest model in the end performed the best in all four metrics, and was chosen as the final model. 
+
+**Table of Results**
+
+![image](https://user-images.githubusercontent.com/106602444/198119775-63dec53c-6c44-4479-a98f-7d56f27d24d2.png)
+
+**ROC Curve: Random Forest Model** 
+
+![image](https://user-images.githubusercontent.com/106602444/198120297-0db9c760-6b45-4443-9094-8d90c76226fa.png)
+
+**Confusion Matrix and Metrics by Poverty Status
+
+![image](https://user-images.githubusercontent.com/106602444/198124752-2feeb7c4-484a-4c94-adf5-513ed28b97d6.png)
+
+![image](https://user-images.githubusercontent.com/106602444/198124789-1e538722-2c7b-4459-baff-a6c8068d41e4.png)
+
+
+## Conclusions 
+
+This exercise was valubale to organize, visualize, analyzse data and in the end use it to create a model that could accurately predict if individuals lived below or above the poverty line. The final model achieved could predict 
