@@ -115,4 +115,10 @@ Financially the following predictor variables were selected for model creation:
 **Poverty Probability Histogram**: Histogram of PPI variable split by what was categorized as under or over the poverty line. Can note that more observations were categorized as Under the Poverty Line. 
 ![image](https://user-images.githubusercontent.com/106602444/198095070-2bd65e2c-b8c8-4e29-b89e-fed82fc8f4f0.png)
 
+**Correlations**: Correlation of all numerical variables, important to note which have high levels of correlation with outcome variable (Poverty Bool)
+![image](https://user-images.githubusercontent.com/106602444/198095607-cc609c4a-55ec-483f-8d12-64e6388960e9.png)
+
+**Demographic Boolean Variables**: Frequency of demographic boolean variables. Note that most individuals are literate, rural living, married, and female. 
+
+![image](https://user-images.githubusercontent.com/106602444/198095868-d2209a7f-5e35-443e-bde6-3b405b4c3e38.png)
 
