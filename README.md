@@ -18,7 +18,7 @@ Original outcome variable was the Poverty Probability Index, which is a probabil
 
 ### Outcome Variable
 
-Instead of prediciting the Poverty Probaility Index, in order to tackle a different problem the PPI was converted to a binary outcome: 0 ("Not Under Poverty Line"), or 1 ("Under Poverty Line"). This was done by assinging 0 to any observations under 0.50, and assigning 1 to any observations over 0.50. There were no observations exactly at 0.50. 
+Instead of prediciting the Poverty Probaility Index, in order to tackle a different problem a new outcome variable was created (Poverty Bool) with a binary outcome: 0 ("Not Under Poverty Line"), or 1 ("Under Poverty Line"). This was done by assinging 0 to any observations under 0.50, and assigning 1 to any observations over 0.50. There were no observations exactly at 0.50. 
 
 
 ### Duplicates and Nulls 
@@ -49,5 +49,12 @@ There were four columns (Bank, MM, MFI, and Other FSP interest rates) that conta
 
 
 
+## Variable Selection 
+
+There were large amounts of colinearity amongst predictor variables, such as the different math skills or banking attributes. For this reason correlation charts were created by groups of variables with high colinearity to evaluate which of the variables should be selected based on their colinearity with the outcome variable (Poverty Bool). 
+
+For example, the below Financial Variables were analyzed and eventually only "Number of Financial Activites" was chosen for modeling, due to its high colinearity with Poverty Bool and the other variables were excluded due to their high colinearity with the variable "Number of Financial Activities". 
+
+![Corr Financial Variables](https://user-images.githubusercontent.com/106602444/198092092-50cd2d1d-4707-4eae-8163-bd78671a9d0c.png)
 
 
