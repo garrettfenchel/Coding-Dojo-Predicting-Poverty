@@ -200,7 +200,8 @@ Due to the outcome variable of Poverty Bool being unbalanced (64% were under pov
 
 ![image](https://user-images.githubusercontent.com/106602444/198124752-2feeb7c4-484a-4c94-adf5-513ed28b97d6.png)
 
-![image](https://user-images.githubusercontent.com/106602444/198124789-1e538722-2c7b-4459-baff-a6c8068d41e4.png)
+![image](https://user-images.githubusercontent.com/106602444/198126304-e409fcc3-9baa-402d-baf6-7c63287581d0.png)
+
 
 
 ## Conclusions 
