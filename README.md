@@ -135,7 +135,7 @@ Country frequencies are generally even, though there is a large difference in av
 
 For income type there is a high frequeny of Agriculture and Livestock, Friends and Family, and Own Business, while Private and Public Sector incomes correlate with lower poverty levels. 
 
-![image](https://user-images.githubusercontent.com/106602444/198109411-1b6598cc-7056-45f5-8e24-82d1fed34e8f.png)
+![image](https://user-images.githubusercontent.com/106602444/198113576-e6461c8d-de67-4c91-bc14-fdd3899a655e.png)
 
 
 **Literacy Rate by Education Level**: Literacy rate correlates highly with Poverty Bool, so to analyze better Literacy Rate, it was compared with Education Levels and Age Groups. A
