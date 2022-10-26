@@ -110,4 +110,9 @@ Financially the following predictor variables were selected for model creation:
 **Math Skill**: Combined number of math skills 
 
 
+## Visualizations 
+
+**Poverty Probability Histogram**: Histogram of PPI variable split by what was categorized as under or over the poverty line. Can note that more observations were categorized as Under the Poverty Line. 
+![image](https://user-images.githubusercontent.com/106602444/198095070-2bd65e2c-b8c8-4e29-b89e-fed82fc8f4f0.png)
+
 
