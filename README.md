@@ -6,7 +6,7 @@ Purpose of this notebook is to complete the final project for Coding Dojo Data S
 Predict whether individuals from 7 different countries are below poverty line ($2.50/day), using household survey data. 
 
 ## Data 
-Data originally comes from a Data Science competition hosted by Microsoft and Data Driven [(Data Science Capstone)](datasciencecapstone.org), and archived data was retrieved through Kaggle [(Kaggle Predicting Poverty)](https://www.kaggle.com/datasets/johnnyyiu/predicting-poverty?select=train_values_wJZrCmI.csv)  
+Data originally comes from a Data Science competition hosted by Microsoft and Data Driven [(Data Science Capstone)](datasciencecapstone.org), and archived data was retrieved through Kaggle [(Kaggle Predicting Poverty)](https://www.kaggle.com/datasets/johnnyyiu/predicting-poverty?select=train_values_wJZrCmI.csv).
 
 Data containes 12,600 observations, with 59 predictor variables: ranging from age, sex, and education levels to financial activity, shocks, and income sources. 
 
@@ -57,7 +57,7 @@ For example, the below Financial Variables were analyzed and eventually only "Nu
 
 ![Corr Financial Variables](https://user-images.githubusercontent.com/106602444/198092092-50cd2d1d-4707-4eae-8163-bd78671a9d0c.png)
 
-Financially the following predictor variables were selected for model creation: 
+Finally the following predictor variables were selected for model creation: 
 
 **Country**: One of 7 country values
 
