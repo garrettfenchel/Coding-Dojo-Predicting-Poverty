@@ -122,12 +122,11 @@ Finally the following predictor variables were selected for model creation:
 
 **Demographic Boolean Variables**: Frequency of demographic boolean variables. Note that most individuals are literate, rural living, married, and female. 
 
-![image](https://user-images.githubusercontent.com/106602444/198383694-a35c7899-e2c0-4689-972f-0f008c0e9244.png)
+![image](https://user-images.githubusercontent.com/106602444/198383860-efff0792-7b38-42df-8738-9c035578f738.png)
 
 **Poverty Probability by Demographic Variables**: Box plots of Poverty Probability (PPI) by demographic variables. There is no large difference in gender, but there are significant differences between Married and Unmarried, Urban vs Rural, and Literate vs Iliterate observations. 
 
-![image](https://user-images.githubusercontent.com/106602444/198383242-1a407419-9aaa-4c45-9908-1d1a25b0c080.png)
-
+![image](https://user-images.githubusercontent.com/106602444/198383840-df3bc34a-31cf-4fd0-acb8-1fcad2b6965f.png)
 
 **Average Poverty Status Categorical Variables**: Average of Poverty Bool by cateogrical variables, with size of circle correlated with frequencies of value. 
 
