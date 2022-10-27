@@ -25,23 +25,23 @@ Instead of prediciting the Poverty Probaility Index, in order to tackle a differ
 
 No duplicate values were found. 
 
-There were four columns (Bank, MM, MFI, and Other FSP interest rates) that contained more than 12,300 null observations. For this reason these columns were dropped from the analysis. After dropping these columns there still contained 550 observations with null values. Due to the small quanity of null values (comparitively to the total data set), they were dropped from the analysis and the final analyses were done with 12,050 observations. 
+There were four columns (Bank, MM, MFI, and Other FSP interest rates) that contained more than 12,300 null observations. For this reason these columns were dropped from the analysis. After dropping these columns, the data set still contained 550 observations with null values. Due to the small quanity of null values (comparitively to the total data set), they were dropped from the analysis and the final analyses were done with 12,050 observations. 
 
 
 ### Data Transformation 
 
-**Boolean**: All boolean variables that originally had values of "True" and "False", were converted to 1 and O respectively 
+**Boolean**: All boolean variables that originally had values of "True" and "False", were converted to 1 and O respectively.
 
-**Categorical**: All categorical variables were converted to integers, starting with 0 
+**Categorical**: All categorical variables were converted to integers, starting with 0.
 
 
-### Combining and New Variable Creation
+### Combining Variables and New Variable Creation
 
-**Religion**: Due to the low frequency of "Religion" values "O" and "N", they were combined to one variable "O_N" 
+**Religion**: Due to the low frequency of "Religion" values "O" and "N", they were combined to one variable "O_N". 
 
-**Math Skill**: There were 4 math skill boolean variables (can add, can divide, etc.), so a new variable "Math Skill" was created by adding up the boolean values (1 or 0) for each of the math skill variables
+**Math Skill**: There were 4 math skill boolean variables (can add, can divide, etc.), so a new variable "Math Skill" was created by adding up the boolean values (1 or 0) for each of the math skill variables. 
 
-**Bank Skill**: There were 5 banking attribute boolean variables (active bank user, active mm user, etc.), so a new variable "Bank Skill" was created by adding up the boolean values (1 or 0) for each of the banking variables
+**Bank Skill**: There were 5 banking attribute boolean variables (active bank user, active mm user, etc.), so a new variable "Bank Skill" was created by adding up the boolean values (1 or 0) for each of the banking variables. 
 
 **Savings**: There were 3 types of savings boolean variables (formal savings, informal savings, etc.), so a new variable "Savings" was created by adding up the boolean values (1 or 0) for each of the savings variables
 
