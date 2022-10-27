@@ -55,7 +55,7 @@ There were large amounts of colinearity amongst predictor variables, such as the
 
 For example, the below Financial Variables were analyzed and eventually only "Number of Financial Activites" was chosen for modeling, due to its high colinearity with Poverty Bool and the other variables were excluded due to their high colinearity with the variable "Number of Financial Activities". 
 
-![Corr Financial Variables](https://user-images.githubusercontent.com/106602444/198092092-50cd2d1d-4707-4eae-8163-bd78671a9d0c.png)
+![image](https://user-images.githubusercontent.com/106602444/198383101-912f36d1-45cb-4dff-82db-faab7f176ef8.png)
 
 Finally the following predictor variables were selected for model creation: 
 
@@ -113,18 +113,20 @@ Finally the following predictor variables were selected for model creation:
 ## Visualizations 
 
 **Poverty Probability Histogram**: Histogram of PPI variable split by what was categorized as under or over the poverty line. Can note that more observations were categorized as Under the Poverty Line. 
-![image](https://user-images.githubusercontent.com/106602444/198095070-2bd65e2c-b8c8-4e29-b89e-fed82fc8f4f0.png)
+
+![image](https://user-images.githubusercontent.com/106602444/198383149-75c11d48-5c1d-4dbc-a4e6-9f43c28f67cb.png)
 
 **Correlations**: Correlation of all numerical variables, important to note which have high levels of correlation with outcome variable (Poverty Bool)
-![image](https://user-images.githubusercontent.com/106602444/198095607-cc609c4a-55ec-483f-8d12-64e6388960e9.png)
+
+![image](https://user-images.githubusercontent.com/106602444/198383166-c45328a3-ff3b-426d-8604-ebe2a51e0b80.png)
 
 **Demographic Boolean Variables**: Frequency of demographic boolean variables. Note that most individuals are literate, rural living, married, and female. 
 
-![image](https://user-images.githubusercontent.com/106602444/198096361-b6ed82f7-c592-48f5-84b3-5ad9b16bd2ee.png)
+![image](https://user-images.githubusercontent.com/106602444/198383212-7a6bec33-6f13-4bc6-ab25-5fae240b3dff.png)
 
 **Poverty Probability by Demographic Variables**: Box plots of Poverty Probability (PPI) by demographic variables. There is no large difference in gender, but there are significant differences between Married and Unmarried, Urban vs Rural, and Literate vs Iliterate observations. 
 
-![image](https://user-images.githubusercontent.com/106602444/198109207-902cb825-430f-4f81-9adc-4067c907fca1.png)
+![image](https://user-images.githubusercontent.com/106602444/198383242-1a407419-9aaa-4c45-9908-1d1a25b0c080.png)
 
 
 **Average Poverty Status Categorical Variables**: Average of Poverty Bool by cateogrical variables, with size of circle correlated with frequencies of value. 
@@ -135,7 +137,7 @@ Country frequencies are generally even, though there is a large difference in av
 
 For income type there is a high frequeny of Agriculture and Livestock, Friends and Family, and Own Business, while Private and Public Sector incomes correlate with lower poverty levels. 
 
-![image](https://user-images.githubusercontent.com/106602444/198113576-e6461c8d-de67-4c91-bc14-fdd3899a655e.png)
+![image](https://user-images.githubusercontent.com/106602444/198383276-ded88669-5445-4342-ab5b-90ab6fcd7f06.png)
 
 
 **Literacy Rate by Education Level**: Literacy rate correlates highly with Poverty Bool, so to analyze better Literacy Rate, it was compared with Education Levels and Age Groups. A
@@ -144,12 +146,12 @@ As expected a positive relationship between education levels and literacy rate.
 
 While a negative relationship between age and literacy rate, most likely reflecting recent trends in increased literacy among younger generations. 
 
-![image](https://user-images.githubusercontent.com/106602444/198110451-724b4b39-7065-42cf-8c9c-cd78965767c0.png)
+![image](https://user-images.githubusercontent.com/106602444/198383303-1ea3857c-a99c-4a1e-bccc-ddbcaf525abd.png)
 
 
 **Histogram All Predictor Variables**: Histogram of all predictor variables. 
 
-![image](https://user-images.githubusercontent.com/106602444/198115016-e85aeeca-ea64-48f7-9ffa-4a56c7cae1da.png)
+![image](https://user-images.githubusercontent.com/106602444/198383324-8119b6e6-7401-4d2b-b447-a58b11c9dae4.png)
 
 
 ## Model Creation
