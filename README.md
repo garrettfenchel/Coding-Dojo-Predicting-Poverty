@@ -1,16 +1,16 @@
 # Predicting Poverty
 
-Purpose of this notebook is to complete the final project for Coding Dojo Data Science and Machine Learning course, where we were tasked with finding a data source, cleaning and organizing the data, analyzing the variables in the dataset, and creating several predicting models and comparing them.  
+Purpose of this notebook is to complete the final project for Coding Dojo Data Science and Machine Learning course, where we were tasked with finding a data source, cleaning and organizing the data, analyzing the variables in the dataset, and creating several predicting models and comparing their results. 
 
 ## Goal
-Predict whether individuals from 7 different countries are below poverty line ($2.50/day), using household survey data. 
+Predict whether individuals from 7 different countries are below poverty line ($2.50/day) using household survey data. 
 
 ## Data 
 Data originally comes from a Data Science competition hosted by Microsoft and Data Driven [(Data Science Capstone)](datasciencecapstone.org), and archived data was retrieved through Kaggle [(Kaggle Predicting Poverty)](https://www.kaggle.com/datasets/johnnyyiu/predicting-poverty?select=train_values_wJZrCmI.csv).
 
 Data containes 12,600 observations, with 59 predictor variables: ranging from age, sex, and education levels to financial activity, shocks, and income sources. 
 
-Original outcome variable was the Poverty Probability Index, which is a calculated probability (0 to 1) if an individual is below the poverty line, based on the 59 household survey results. 
+Original outcome variable was the Poverty Probability Index, which is a calculated probability (0 to 1) if an individual is below the poverty line, based on the 59 predictor variables mostly from the survey results. 
 
 
 
@@ -18,7 +18,7 @@ Original outcome variable was the Poverty Probability Index, which is a calculat
 
 ### Outcome Variable
 
-Instead of prediciting the Poverty Probaility Index, in order to tackle a different problem a new outcome variable was created (Poverty Bool) with a binary outcome: 0 ("Over Poverty Line"), or 1 ("Under Poverty Line"). This was done by assinging 0 to any observations with a PPI under 0.50, and assigning 1 to any observations with a PPI over 0.50. There were no observations exactly at 0.50. 
+In order to tackle a different problem, instead of prediciting the Poverty Probaility Index a new outcome variable was created (Poverty Bool) with a binary outcome: 0 ("Over Poverty Line"), or 1 ("Under Poverty Line"). This was done by assinging 0 to any observations with a PPI under 0.50, and assigning 1 to any observations with a PPI over 0.50. There were no observations exactly at 0.50. 
 
 
 ### Duplicates and Nulls 
@@ -26,14 +26,6 @@ Instead of prediciting the Poverty Probaility Index, in order to tackle a differ
 No duplicate values were found. 
 
 There were four columns (Bank, MM, MFI, and Other FSP interest rates) that contained more than 12,300 null observations. For this reason these columns were dropped from the analysis. After dropping these columns, the data set still contained 550 observations with null values. Due to the small quanity of null values (comparitively to the total data set), they were dropped from the analysis and the final analyses were done with 12,050 observations. 
-
-
-### Data Transformation 
-
-**Boolean**: All boolean variables that originally had values of "True" and "False", were converted to 1 and O respectively.
-
-**Categorical**: All categorical variables were converted to integers, starting with 0.
-
 
 ### Combining Variables and New Variable Creation
 
@@ -43,17 +35,23 @@ There were four columns (Bank, MM, MFI, and Other FSP interest rates) that conta
 
 **Bank Skill**: There were 5 banking attribute boolean variables (active bank user, active mm user, etc.), so a new variable "Bank Skill" was created by adding up the boolean values (1 or 0) for each of the banking variables. 
 
-**Savings**: There were 3 types of savings boolean variables (formal savings, informal savings, etc.), so a new variable "Savings" was created by adding up the boolean values (1 or 0) for each of the savings variables
+**Savings**: There were 3 types of savings boolean variables (formal savings, informal savings, etc.), so a new variable "Savings" was created by adding up the boolean values (1 or 0) for each of the savings variables.
 
-**Age Groups**: A new variable was created grouping the ages into 4 different groups (15-18, 18-40,40-60, 60+)
+**Age Groups**: A new variable was created grouping the ages into 4 different groups (15-18, 18-40, 40-60, 60+).
+
+### Data Transformation 
+
+**Boolean**: All boolean variables that originally had values of "True" and "False", were converted to 1 and O respectively.
+
+**Categorical**: All categorical variables were converted to integers, starting with 0.
 
 
 
 ## Variable Selection 
 
-There were large amounts of colinearity amongst predictor variables, such as the different math skills or banking attributes. For this reason correlation charts were created by groups of variables with high colinearity to evaluate which of the variables should be selected for final analysis based on their colinearity with the outcome variable (Poverty Bool) and versus other predictor variables. 
+There were large amounts of colinearity amongst predictor variables, such as the different math skills or banking attributes. For this reason correlation matrices were constructed by groups of variables with high colinearity to evaluate which of the variables should be selected for final analysis based on their colinearity with the outcome variable (Poverty Bool) and their colinearity with other predictor variables. 
 
-For example, the below Financial Variables were analyzed and eventually only "Number of Financial Activites" was chosen for modeling, due to its high colinearity with Poverty Bool and the other variables were excluded due to their high colinearity with the variable "Number of Financial Activities". 
+For example below, several financial variables were analyzed and eventually only "Number of Financial Activites" was chosen for modeling, due to its high colinearity with Poverty Bool and the other variables were excluded due to their high colinearity with the chosen variable "Number of Financial Activities". 
 
 ![image](https://user-images.githubusercontent.com/106602444/198383101-912f36d1-45cb-4dff-82db-faab7f176ef8.png)
 
@@ -124,13 +122,13 @@ Finally the following predictor variables were selected for model creation:
 
 ![image](https://user-images.githubusercontent.com/106602444/198383860-efff0792-7b38-42df-8738-9c035578f738.png)
 
-**Poverty Probability by Demographic Variables**: Box plots of Poverty Probability (PPI) by demographic variables. There is no large difference in gender, but there are significant differences between Married and Unmarried, Urban vs Rural, and Literate vs Iliterate observations. 
+**Poverty Probability by Demographic Variables**: Box plots of PPI by demographic variables. There is no large difference in gender, but there are significant differences between Married and Unmarried, Urban vs Rural, and Literate vs Iliterate observations. 
 
 ![image](https://user-images.githubusercontent.com/106602444/198383840-df3bc34a-31cf-4fd0-acb8-1fcad2b6965f.png)
 
 **Average Poverty Status Categorical Variables**: Average of Poverty Bool by cateogrical variables, with size of circle correlated with frequencies of value. 
 
-There is a large quantity of observations between 18-40, though the average of all each group is significantly under the poverty line. 
+There is a large quantity of observations between 18-40, though the majority of each group are under the poverty line. 
 
 Country frequencies are generally even, though there is a large difference in average poverty status between countries A, C, and D vs countries F, G, I, and J. 
 
@@ -207,4 +205,6 @@ Due to the outcome variable of Poverty Bool being unbalanced (64% were under pov
 
 ## Conclusions 
 
-This exercise was valubale to organize, visualize, analyzse data and in the end use create a model that could accurately predict if individuals lived below or above the poverty line. The final model achieved could predict reasonably well (77% of the time) if individuals were under or above the poverty line ($2.50/day) though it did show bias by more frequently falsly predicting that an individual was under the poverty line, mainly due to the unbalanced outcome data. Further analysis would have to be done to either pull data that is balanced, or correct the bias to achieve better and more fair results. 
+This exercise was valubale to organize, visualize, analyzse data and in the end use create a model that could accurately predict if individuals lived below or above the poverty line. The best performing model (Random Forest) makes intuitive sense due to the fact that the predictor variables are almost all boolean or categorical, which lend themselves well to a desicion tree methodology. The final model achieved could predict reasonably well (77% of the time) if individuals were under or above the poverty line ($2.50/day) though it did show bias by more frequently falsly predicting that an individual was under the poverty line, mainly due to the unbalanced outcome data. 
+
+There are two areas where further analysis would help acheive a better result. First, would be to attempt to adjust or reevaluate the outcome variable to compensate for its unbalanced nature, in order to more accurately predict those that live over the poverty line. Second, would be to optimize the variables chosen in the model. No comprehenisve testing (such as Grid Search) was done to optimize which variables should be chosen, and since there are so many variables to choose from and because many are highly correlated with one-another a thorough optimization of indicators would be ideal. 
